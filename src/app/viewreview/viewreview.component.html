@@ -1,0 +1,9 @@
+<div class="container">
+<h2>your Reviews</h2>
+<div *ngFor="let r of reviews">
+    <div *ngIf="idnum == r.id ">
+        <p>{{r.review}}</p>
+    </div>
+</div>
+<div><button routerLink="/list" class="btn btn-info" type="button"> ok</button>
+</div>

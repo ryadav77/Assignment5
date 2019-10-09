@@ -1,0 +1,24 @@
+<div class="container">
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">Price</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody *ngIf ="books.length > 0">
+            <tr *ngFor = "let b of books">
+              <th scope="row">{{b.id}}</th>
+              <td> {{b.title}} </td>
+              <td> {{b.author}} </td>
+              <td> {{b.price}} </td>
+              <td> <button style="color: black; background-color: white"type="button" id={{b.id}} routerLink="/review" (click)="onClick($event)"  class="btn btn-info"> Write a review </button> </td>
+              <td> <button style="color: black; background-color: white" type="button" id={{b.id}} routerLink="/viewreview" (click)="onClick($event)"  class="btn btn-info"> View Reviews </button> </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
